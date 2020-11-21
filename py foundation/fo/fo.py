@@ -1,0 +1,12 @@
+ls=input("请输入要比较的的数：")
+fo=open("C:\\Users\\HP\\Desktop\\fo.txt","w+")
+for line in ls:
+    fo.writelines(line)
+fo.write("\n")
+ls = ls.split()
+ls=list(map(int,ls))
+ls.sort()
+print(ls)
+ls=list(map(str,ls))
+fo.writelines("".join(ls))
+fo.close()
